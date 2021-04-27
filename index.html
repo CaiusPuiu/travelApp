@@ -6,21 +6,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="Description" content="Put your description here.">
   <base href="/">
-
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <title>travel-app</title>
 </head>
 
 <body>
-  <travel-app></travel-app>
+
+  <section class="section-header">
+    <header>
+      <nav>
+        <h3>Travel Now</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="">Tour</a></li>
+          <li><a href="">Hotel</a></li>
+          <li><a href="">Places</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+
+        <a href=""><span class="header-book-now">Book now</span></a>
+
+      </nav>
+    </header>
+    <h1>Discover The World With Us</h1>
+    <button type="button" class="start-tour-button">Start Tour</button>
+  </section>
+
+  <form>
+    <section class="travel-destination-form">
+      <div>
+        <label for="destination">Destination</label>
+        <select name="destination">
+          <option value="St Kitts and Nevis">St Kitts and Nevis</option>
+          <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+          <option value="Madeira">Madeira</option>
+          <option value="Solomon Islands">Solomon Islands</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="member">Member</label>
+        <input type="number" min="1" name="member">
+      </div>
+      <div>
+        <label for="checkIn">Check in Date</label>
+        <input type="date" name="checkIn">
+      </div>
+      <div>
+        <label for="checkOut">Check out Date</label>
+        <input type="date" name="checkOut">
+      </div>
+        <button type="button" class="form-book-now">Book Now</button>
+    </section>
+  </form>
+  <div class="content-description">
+    <div class="content-description-image">
+      <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="not working...">
+    </div>
+    <div class="content-description-text">
+
+      <h2>Amazing Places to enjoy your Travel</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur dicta assumenda dolorum molestias totam at vel nobis illo facere excepturi.</p>
+      <button type="button" class="explore-more-button">Explore More</button>
+    </div>
+  </div>
+
+  <footer>
+    <h3>Get in Touch</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, at suscipit.</p>
+    <div class="subscribe-section">
+      <input type="text" placeholder = "Enter your email adress" name="email" class="email-input">
+      <button type="button" class="subscribe-button">Subscribe</button>
+    </div>
+    <hr>
+      <ul>
+        <li><a>Home</a></li>
+        <li><a>Tour</a></li>
+        <li><a>Hotel</a></li>
+        <li><a>Places</a></li>
+        <li><a>Contact Us</a></li>
+      </ul>
+      <p>&copy; DevSchool 2021</p>
+
+
+  </footer>
+
+  <!-- <travel-app></travel-app> -->
 
   <script type="module" src="./src/travel-app.js"></script>
 </body>

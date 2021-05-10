@@ -34,75 +34,76 @@ Welcome to TravelApp starter kit ! You will implement features for the app while
 ### Response
 ```
 {
-  "-M_-jo5OtFpAI6VmbuL7": {
-    "description": "lorem ipsum",
-    "imageUrl": "",
-    "name": "Muntii Ciucas",
-    "type": "nature"
-  },
-  "-M_0FRA88kxxoFoCsJlZ": {
-    "description": "lorem ipsum",
-    "imageUrl": "",
-    "name": "Muntii Ciucas",
-    "type": "nature"
-  },
-  "-M_0FU0O2hR90y8WfSRX": {
-    "description": "lorem ipsum",
-    "imageUrl": "https://images.unsplash.com/photo-1606640128433-0ae4eff6feb4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=336&q=80",
-    "name": "Bucharest",
-    "type": "urban"
-  },
-  "-M_0FmYHdmGSaYHEIdRy": {
-    "description": "lorem ipsum",
-    "imageUrl": "https://images.unsplash.com/photo-1569492489542-aa3d6836e688?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80",
-    "name": "Madeira",
-    "type": "beach"
-  },
-  "-M_0Fu7rm18Q7EkKj5X_": {
-    "description": "lorem ipsum",
-    "imageUrl": "https://images.unsplash.com/photo-1606435477318-ec027fff45a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80",
-    "name": "Trinidad and Tobago",
-    "type": "tropical"
-  }
+  "-M_MwHztH2cSS9Fmcp3I": [
+    {
+      "description": "A wild place deep in Carpathian Mountains ready to be explored",
+      "imageUrl": "https://images.unsplash.com/photo-1502528230654-e2161eb9f08a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l1Y2FzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Muntii Ciucas",
+      "type": "nature"
+    },
+    {
+      "description": "Caraibean country with crystal clear water and stunning views",
+      "imageUrl": "https://images.unsplash.com/photo-1591490029263-e0a3b9a83cf9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80",
+      "name": "Saint Kitts and Nevis",
+      "type": "beach"
+    },
+    {
+      "description": "Beach, mountains, cliffs, ocean, endless views and friendly weather",
+      "imageUrl": "https://images.unsplash.com/photo-1569492489542-aa3d6836e688?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80",
+      "name": "Madeira",
+      "type": "nature"
+    },
+    {
+      "description": "A variety of undiscovered island from you can choose to make a trip you won't forget",
+      "imageUrl": "https://images.unsplash.com/photo-1606435477318-ec027fff45a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80",
+      "name": "Trinidad and Tobago",
+      "type": "tropical"
+    }
+  ]
 }
 ```
-## Get a  specific place(ex:Madeira)
 
-### Request
-
-  ```
-  curl -X GET 'https://devschool-2020.firebaseio.com/Caius/places/-M_0FmYHdmGSaYHEIdRy.json'
-  ```
-
-### Response
-
-```
-{
-  "description": "lorem ipsum",
-  "imageUrl": "https://images.unsplash.com/photo-1569492489542-aa3d6836e688?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80",
-  "name": "Madeira",
-  "type": "beach"
-}
-
-```
-## Add new place
+## Add new places
 
 ### Request
 
   ``` 
-    curl -X POST -d '{
-    "description": "lorem ipsum",
+    curl -X POST -d '[
+	
+{		
+		"name": "Muntii Ciucas",
+	  "type": "nature",
+    "imageUrl": "https://images.unsplash.com/photo-1502528230654-e2161eb9f08a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l1Y2FzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+	  "description": "A wild place deep in Carpathian Mountains ready to be explored"
+  },
+   {
+		 "name": "Saint Kitts and Nevis",
+		 "type": "beach",
+		 "imageUrl": "https://images.unsplash.com/photo-1591490029263-e0a3b9a83cf9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80",
+   	 "description": "Caraibean country with crystal clear water and stunning views"
+   
+  },
+   { 
+		 "name": "Madeira",
+		 "type": "nature",
+    "imageUrl": "https://images.unsplash.com/photo-1569492489542-aa3d6836e688?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80",
+		  "description": "Beach, mountains, cliffs, ocean, endless views and friendly weather"
+  },
+  {
+		"name": "Trinidad and Tobago",
+    "type": "tropical",
     "imageUrl": "https://images.unsplash.com/photo-1606435477318-ec027fff45a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80",
-    "name": "Trinidad and Tobago",
-    "type": "tropical"
-  }' 'https://devschool-2020.firebaseio.com/Caius/places.json'
+		"description": "A variety of undiscovered island from you can choose to make a trip you won't forget"
+  }
+
+]' 'https://devschool-2020.firebaseio.com/Caius/places.json'
   ```
 
 ### Response
 
 ```
  {
-  "name": "-M_0Fu7rm18Q7EkKj5X_"
+  "name": "-M_MwHztH2cSS9Fmcp3I"
 }
 ```
 ## Update place(PUT, ex Muntii Ciucas-> Saint Kitts and Nevis(id:-M_0FRA88kxxoFoCsJlZ))

@@ -305,7 +305,9 @@ footer .subscribe-section input[type='button']:hover {
       <button type="button" class="explore-more-button">Explore More</button>
     </div>
   </div>
-
+  <div>
+    <travel-card></travel-card>
+  </div>
   <footer>
     <div class="subscribe-section">
       <h3>Get in touch</h3>
@@ -339,12 +341,14 @@ footer .subscribe-section input[type='button']:hover {
   <!-- <travel-app></travel-app> -->
 
   <script type="module" src="./src/travel-app.js"></script>
-  <script>
-     fetch('https://devschool-2020.firebaseio.com/Caius/places.json')
+  <!-- <script>
+     fetch('https://devschool-2020.firebaseio.com/Caius/places/-M_MwHztH2cSS9Fmcp3I.json')
     .then(response => response.json())
     .then(data => console.log(data))
-    .catch(err => console.error(err));
-  </script>
+  // </script> -->
+
+   <script type="module" src="./travel-content/travel-card.js"></script>
+
 </body>
 
 </html>

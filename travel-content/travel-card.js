@@ -16,7 +16,7 @@ class TravelCard extends LitElement {
   static get styles() {
     return css`
       div {
-        background-color: rgba(245, 245, 245, 255);
+        background-color: #ededed;
         width: 100vw;
         padding: 10px;
         margin-bottom: 35px;
@@ -43,7 +43,7 @@ class TravelCard extends LitElement {
       }
       ul li {
         list-style-type: none;
-        background-color: #ffff;
+        background-color: #ffffff;
         padding: 2em;
         border-radius: 1em;
       }

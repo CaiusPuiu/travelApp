@@ -10,17 +10,9 @@ body {
   background-color: #ededed;
 }
 
-.section-header{
-  background-image: url("/assets/images/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg");
-  margin:0 24px 0 24px;
-  padding-bottom: 288px;
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position:center;
-}
 
-.section-header h3 {
+
+header h3 {
   font-weight: 400;
   color:#847ff0;
   font-size: 24px;
@@ -28,7 +20,7 @@ body {
 
 }
 
-.section-header nav {
+header nav {
   display:flex;
   justify-content: space-evenly;
   align-items: center;
@@ -36,20 +28,20 @@ body {
 
 }
 
-.section-header li {
+header li {
   padding:8px;
   display:inline-block;
   font-size:24px;
 }
 
-.section-header a {
-  color:#ffffff;
+header a {
+  color:#000000;
   text-decoration: none;
   padding: 24px;
 }
 
 
-.section-header ul li a:hover {
+header ul li a:hover {
   background-color:#847ff0;
 }
 
@@ -61,10 +53,32 @@ body {
   color:#847ff0;
   padding:16px 16px;
 }
-.section-header h1 {
+.main-title {
   font-size:48px;
   font-weight: 900;
   color:#ffffff;
+}
+
+.hero-image {
+  background-image: url("https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDF8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  margin:0 24px 0 24px;
+  padding-bottom: 288px;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position:center;
+  height: 600px;
+}
+.hero-image-credits {
+  float: left;
+  margin-top: 200px;
+  background-color: #bdbdbd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.hero-image-credits a{
+  color: #847ff0;
+  font-weight: 400;
 }
 
 .start-tour-button {
@@ -79,6 +93,7 @@ body {
   cursor: pointer;
 }
 
+
 .travel-destination-form{
   background-color: #ffffff;
   border: 8px solid #bdbdbd;
@@ -86,11 +101,18 @@ body {
   border-radius:36px;
   width: 75%;
   margin: 0 auto;
-  position:absolute;
-  top:80%;
+  position: absolute;
+  top:85%;
   left:0;
   right:0;
 }
+.travel-destination-form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .form-book-now{
   border:4px solid ;
   border-radius: 12px;
@@ -100,6 +122,8 @@ body {
   font-weight: 700;
   color: #ffffff;
   cursor: pointer;
+  margin-top: 30px;
+  margin-left: 10px;
 }
 .travel-destination-form div{
   float:left;
@@ -120,6 +144,7 @@ body {
   text-align: left;
   display: block;
   margin-bottom: 12px;
+  margin-left: 20px;
 }
 
 .content-description{
@@ -145,34 +170,6 @@ body {
 
 }
 
-.content-description-image
-{
-	margin: 12px 0;
-}
-@media (min-width: 312px)
-{
-	.content-description-image
-	{
-		display: flex;
-		align-items: center;
-	}
-
-	.content-description-image img
-	{
-		margin-right: 12px;
-		float: left;
-	}
-
-	.content-description-image::after
-
-	{
-		content: "";
-  	display: block;
-		clear: both;
-	}
-}
-
-
 .explore-more-button{
   border:4px solid #847ff0;
   border-radius: 12px;
@@ -193,49 +190,69 @@ footer{
   margin: 0 24px 0 24px;
   color:#FFF;
 }
-footer ul{
-  display:flex;
+
+.footer-contacts {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  width: 95vw;
   justify-content: space-around;
-  align-items: center;
-  padding:4px 8px 12px 8px;
 }
-footer li{
-  padding:8px;
-  display:inline-block;
-  font-size:12px;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 12px;
+.footer-contacts ul {
+  display: flex;
+}
+.footer-contacts ul li {
+  list-style-type: none;
+  margin-right: 2em;
+  font-weight: 500;
 }
 
-.email-input{
-  height: 48px;
-  width: 192px;
-  background: #ffffff;
-  border: solid 4px #bdbdbd;
-  padding: 24px;
-  margin: 8px;
-  margin-right: 0;
-  font-size:12px;
-  font-weight:700;
-  color: #bdbdbd;
+footer .subscribe-section {
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
-
-.subscribe-button {
-
-  border:4px solid #847ff0;
-  border-radius: 12px;
-  background-color:#ffffff;
-  font-weight: 700;
-  color:#847ff0;
-  padding:16px 16px;
-  cursor: pointer;
-  border: solid 4px #bdbdbd;
+footer .subscribe-section h3 {
+  margin-bottom: 10px;
+  padding-top: 14px;
+  font-size: 30px;
 }
-
-footer h3 {
-  font-weight: 400;
-  color:#ffffff;
-  font-size: 24px;
+footer .subscribe-section p {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+footer .subscribe-section input[type='email'] {
+  padding: 40px;
+  width: 46%;
+  border-radius: 4em;
+  position: relative;
+  border: none;
+}
+footer .subscribe-section input::placeholder {
+  font-size: 14px;
   font-weight: 600;
+  width: 800vw;
+  padding-left: 3em;
+  position: fixed;
+  color: #847ff0;
 }
+footer .subscribe-section input[type='button'] {
+  margin-top: 4px;
+  border: none;
+  cursor: pointer;
+  padding: 1.7em 3em;
+  border-radius: 3em;
+  background-color: #847ff0;
+  color: white;
+  font-weight: bold;
+  font-size: 19px;
+  position: absolute;
+  right: 30%;
+
+}
+footer .subscribe-section input[type='button']:hover {
+  background-color:#03fc7b;
+  transition: 0.5s;
+}
+
+

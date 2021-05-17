@@ -51,7 +51,8 @@
 
   <div class="travel-destination-form">
   <form>
-      <div>
+    <div class="travel-destination-form-content">
+      <div class="travel-destination-form-destinations">
         <label for="destination">Destination</label>
         <select name="destination">
           <option value="St Kitts and Nevis">St Kitts and Nevis</option>
@@ -61,19 +62,20 @@
         </select>
       </div>
 
-      <div>
+      <div class="travel-destination-form-members">
         <label for="member">Members</label>
         <input type="number" min="1" name="member">
       </div>
-      <div>
+      <div class="travel-destination-form-check-in">
         <label for="checkIn">Check in Date</label>
         <input type="date" name="checkIn">
       </div>
-      <div>
+      <div class="travel-destination-form-check-out">
         <label for="checkOut">Check out Date</label>
         <input type="date" name="checkOut">
       </div>
       <button type="button" class="form-book-now">Book Now</button>
+    </div>
   </form>
   </div>
 
@@ -82,16 +84,17 @@
       <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
       alt="man with red hiking backpack facing body of water and mountains at daytime, photo by Philipp Kammerer">
     </div>
-    <div class="content-description-text">
 
+    <div class="content-description-text">
       <h2>Amazing Places to enjoy your Travel</h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur dicta assumenda dolorum molestias totam at vel nobis illo facere excepturi.</p>
       <button type="button" class="explore-more-button">Explore More</button>
     </div>
   </div>
-  <div>
+  <div class="travel-destinations">
     <travel-card></travel-card>
   </div>
+
   <footer>
     <div class="subscribe-section">
       <h3>Get in touch</h3>

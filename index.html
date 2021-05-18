@@ -92,9 +92,11 @@
     </div>
   </div>
   <div class="travel-destinations">
-    <travel-card></travel-card>
+    <travel-card-list></travel-card-list>
   </div>
-
+  <div class="travel-destinations-form">
+    <destination-form></destination-form>
+  </div>
   <footer>
     <div class="subscribe-section">
       <h3>Get in touch</h3>
@@ -128,14 +130,18 @@
   <!-- <travel-app></travel-app> -->
 
   <script type="module" src="./src/travel-app.js"></script>
-  <!-- <script>
-     fetch('https://devschool-2020.firebaseio.com/Caius/places/-M_MwHztH2cSS9Fmcp3I.json')
+  <script>
+     fetch('https://devschool-2020.firebaseio.com/Caius/places.json')
     .then(response => response.json())
     .then(data => console.log(data))
-  // </script> -->
+  // </script>
 
-   <script type="module" src="./travel-content/travel-card.js"></script>
+   <script type="module" src="./TravelComponents/TravelCardList.js"></script>
+   <script type="module" src="./TravelComponents/TravelForm.js"></script>
+
 
 </body>
 
 </html>
+
+

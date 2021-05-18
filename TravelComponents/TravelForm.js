@@ -3,6 +3,8 @@ import './LionWevComponents/TraveLionButton.js';
 import './LionWevComponents/TravelLionForm.js';
 import './LionWevComponents/TravelLionInput.js';
 import { ajax } from '@lion/ajax';
+import { MinLength, Required } from '@lion/form-core';
+import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 
 class DestinationForm extends LitElement {
   static get styles() {
@@ -43,21 +45,52 @@ class DestinationForm extends LitElement {
   }
 
   render() {
+    loadDefaultFeedbackMessages();
     return html`
       <travel-lion-form>
         <form @submit=${this._handleFormSubmit}>
-          <travel-lion-input name="name" label="Location's name">
+          <travel-lion-input
+            name="name"
+            label="Name"
+            .validators=${[
+              new MinLength(4, {
+                getMessage: () => 'Please enter a valid name location',
+              }),
+            ]}
+          >
           </travel-lion-input>
-          <travel-lion-input name="type" label="Location's type">
+          <travel-lion-input
+            name="type"
+            label="Location"
+            .validators=${[
+              new MinLength(4, {
+                getMessage: () => 'Please enter a valid type location',
+              }),
+            ]}
+          >
           </travel-lion-input>
           <travel-lion-input
             name="description"
-            label="Location's description"
-          ></travel-lion-input>
+            label="Description"
+            .validators=${[
+              new MinLength(4, {
+                getMessage: () => 'Please enter a valid description',
+              }),
+              new Required(),
+            ]}
+          >
+          </travel-lion-input>
           <travel-lion-input
             name="imageUrl"
-            label="Location's picture"
-          ></travel-lion-input>
+            label="ImageUrl"
+            .validators=${[
+              new MinLength(4, {
+                getMessage: () => 'Please enter a valid url',
+              }),
+              new Required(),
+            ]}
+          >
+          </travel-lion-input>
           <travel-lion-button type="submit">Add location</travel-lion-button>
         </form>
       </travel-lion-form>

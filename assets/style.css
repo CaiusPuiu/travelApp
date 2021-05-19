@@ -449,5 +449,139 @@ footer .subscribe-section input[type='button'] {
 }
 
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  header h3{
+    font-size: 24px;
+  }
+
+  nav  {
+    display: flex;
+    flex-direction: column;
+  }
+  nav a{
+    font-size: 0.3em;
+    padding: 3px;
+
+  }
+  .header-book-now{
+    font-size: 0.7em;
+    padding: 18px;
+    position: relative;
+    top: 24px;
+  }
+  .main-title {
+    font-size: 1.6em;
+    position: relative;
+    top:2em;
+  }
+  .start-tour-button{
+    font-size: 0.3em;
+    padding: 20px;
+    position: relative;
+    top:5em;
+  }
+  .travel-destination-form-content{
+    width: 100vw;
+    display: flex;
+    flex-flow: wrap;
+    font-size: 8px;
+
+  }
+  .travel-destination-form{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 15em;
+  }
+
+  .travel-destination-form-destinations select{
+    width: 12em;
+    padding: 4px;
+    margin: 0;
+  }
+  .travel-destination-form-members input{
+    width: 12em;
+    padding: 4px;
+    margin: 0;
+    }
+    .travel-destination-form-check-in input{
+    width: 12em;
+    padding: 4px;
+    margin: 0;
+    }
+    .travel-destination-form-check-out input{
+      width: 12em;
+      padding: 4px;
+      margin: 0;
+    }
+  .form-book-now{
+    font-size: 0.6em;
+    padding:3.5em;
+    margin-top: 0;
+    position: relative;
+    left: 35px;
+  }
+  .explore-more-button{
+    font-size: 0.4em;
+    padding:2.8em;
+  }
+  .content-description{
+    margin-top: 0;
+    position: relative;
+    bottom: 15em;
+  }
+  .content-description-image{
+    width: 30vw;
+    height: auto;
+    border-radius: 0;
+  }
+  .content-description-text{
+    position: relative;
+    left: 5px;
+  }
+  .content-description-text p{
+    font-size: 0.6em;
+  }
+  .content-description-text h2{
+    font-size: 1em;
+  }
+  footer .subscribe-section{
+    position: relative;
+    bottom:100px;
+
+  }
+  footer .subscribe-section p {
+
+    font-size: 0.8em;
+  }
+  footer .subscribe-section h3 {
+
+    font-size: 1.5em;
+  }
+
+  footer .subscribe-section input[type='button'] {
+    position: relative;
+    top: 2px;
+    left: 1em;
+    border: solid 2px #bdbdbd;
+    font-size: 0.6em;
+
+  }
+   footer #email{
+     width: 10em;
+     height: 1em;
+   }
+  .footer-contacts{
+    font-size: 0.5em;
+    padding: 2px;
+    position: relative;
+    right:13em
+  }
+  .footer-contacts p{
+    position: relative;
+    left: 5em;
+  }
+}
 
 

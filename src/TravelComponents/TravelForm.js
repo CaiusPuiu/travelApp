@@ -5,6 +5,7 @@ import './LionWevComponents/TravelLionInput.js';
 import { ajax } from '@lion/ajax';
 import { MinLength, Required } from '@lion/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
+import { IsRomania } from './FormValidators/isRomania.js';
 
 class DestinationForm extends LitElement {
   static get styles() {
@@ -42,10 +43,10 @@ class DestinationForm extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
+    loadDefaultFeedbackMessages();
   }
 
   render() {
-    loadDefaultFeedbackMessages();
     return html`
       <travel-lion-form>
         <form @submit=${this._handleFormSubmit}>
@@ -56,12 +57,14 @@ class DestinationForm extends LitElement {
               new MinLength(4, {
                 getMessage: () => 'Please enter a valid name location',
               }),
+              new Required(),
+              new IsRomania(),
             ]}
           >
           </travel-lion-input>
           <travel-lion-input
             name="type"
-            label="Location"
+            label="Type"
             .validators=${[
               new MinLength(4, {
                 getMessage: () => 'Please enter a valid type location',
@@ -83,12 +86,7 @@ class DestinationForm extends LitElement {
           <travel-lion-input
             name="imageUrl"
             label="ImageUrl"
-            .validators=${[
-              new MinLength(4, {
-                getMessage: () => 'Please enter a valid url',
-              }),
-              new Required(),
-            ]}
+            .validators=${[new Required()]}
           >
           </travel-lion-input>
           <travel-lion-button type="submit">Add location</travel-lion-button>

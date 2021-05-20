@@ -25,6 +25,7 @@ class TodoList extends LitElement {
       { text: 'dolor sit', done: true },
       { text: 'amet', done: false },
     ];
+    // this._todos = JSON.parse(localStorage.getItem('todoValue'));
   }
 
   connectedCallback() {
@@ -67,12 +68,15 @@ class TodoList extends LitElement {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-
     this._todos.push({ ...Object.fromEntries(formData), done: false });
     this.requestUpdate();
-
+    // this._updateLocalStorage();
     form.reset();
   }
+  _updateLocalStorage() {
+    localStorage.setItem('todoValue', JSON.stringify(this._todos));
+  }
+
 
   _handleUpdateTodo(index, e) {
     this._todos = [
@@ -80,6 +84,7 @@ class TodoList extends LitElement {
       { text: e.detail.text, done: this._todos[index].done },
       ...this._todos.slice(index + 1),
     ];
+    // this._updateLocalStorage();
   }
 }
 

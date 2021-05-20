@@ -1,13 +1,13 @@
 import { LitElement, css, html } from '@lion/core';
-import './LionWevComponents/TraveLionButton.js';
-import './LionWevComponents/TravelLionForm.js';
-import './LionWevComponents/TravelLionInput.js';
+import '../LionWebComponents/TraveLionButton.js';
+import '../LionWebComponents/TravelLionForm.js';
+import '../LionWebComponents/TravelLionInput.js';
 import { ajax } from '@lion/ajax';
 import { MinLength, Required } from '@lion/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import { IsRomania } from './FormValidators/isRomania.js';
+import { IsRomania } from '../FormValidators/isRomania.js';
 
-class DestinationForm extends LitElement {
+class AddDestinationForm extends LitElement {
   static get styles() {
     return css`
       form {
@@ -115,4 +115,4 @@ class DestinationForm extends LitElement {
   }
 }
 
-customElements.define('destination-form', DestinationForm);
+customElements.define('add-destination-form', AddDestinationForm);

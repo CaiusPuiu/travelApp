@@ -30,8 +30,56 @@ class TravelCard extends LitElement {
       @media screen and (min-width: 769px) and (max-width: 1024px) {
         img {
           width: 100%;
-          max-width: 1024px;
-          height: 350px;
+          height: 200px;
+        }
+        .travel-card-container {
+          height: 300px;
+        }
+        h1 {
+          font-size: 18px;
+        }
+        h3 {
+          font-size: 14px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        img {
+          width: 100%;
+          height: 100px;
+        }
+        .travel-card-container {
+          height: 180px;
+        }
+        h1 {
+          font-size: 12px;
+        }
+        h3 {
+          font-size: 10px;
+        }
+        p {
+          font-size: 7px;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        img {
+          width: 100%;
+          height: 100px;
+        }
+        .travel-card-container {
+          height: 180px;
+        }
+        h1 {
+          font-size: 12px;
+        }
+        h3 {
+          font-size: 10px;
+        }
+        p {
+          font-size: 7px;
         }
       }
     `;
@@ -39,7 +87,7 @@ class TravelCard extends LitElement {
 
   render() {
     return html`
-      <div>
+      <div class="travel-card-container">
         <img src=${this.travelCard.imageUrl} alt="not working" />
         <h1>${this.travelCard.name}</h1>
         <h3>${this.travelCard.type}</h3>

@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 
 class Footer extends LitElement {
-  static get elements() {
+  static get properties() {
     return {
       loading: {
         type: Boolean,

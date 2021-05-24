@@ -129,9 +129,8 @@ class Header extends LitElement {
           <h3>Travel Now</h3>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Tour</a></li>
-            <li><a href="#">Hotel</a></li>
-            <li><a href="#">Places</a></li>
+            <li><a href="/add-destination">Add Destination</a></li>
+            <li><a href="/places">Places</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
           <a href="#"><span class="header-book-now">Book now</span></a>

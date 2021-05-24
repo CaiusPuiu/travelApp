@@ -192,4 +192,4 @@ class Footer extends LitElement {
   }
 }
 
-customElements.define('footer-element', Footer);
+customElements.define('footer-component', Footer);

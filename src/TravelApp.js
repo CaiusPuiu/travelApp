@@ -1,3 +1,4 @@
+
 import { LitElement, html, css } from 'lit-element';
 import { openWcLogo } from './open-wc-logo.js';
 
@@ -23,16 +24,13 @@ export class TravelApp extends LitElement {
         text-align: center;
         background-color: var(--travel-app-background-color);
       }
-
       main {
         flex-grow: 1;
       }
-
       .logo > svg {
         margin-top: 36px;
         animation: app-logo-spin infinite 20s linear;
       }
-
       @keyframes app-logo-spin {
         from {
           transform: rotate(0deg);
@@ -41,12 +39,10 @@ export class TravelApp extends LitElement {
           transform: rotate(360deg);
         }
       }
-
       .app-footer {
         font-size: calc(12px + 0.5vmin);
         align-items: center;
       }
-
       .app-footer a {
         margin-left: 5px;
       }
@@ -55,7 +51,7 @@ export class TravelApp extends LitElement {
 
   constructor() {
     super();
-    this.title = 'My app';
+    this.title = 'DevSchool app';
   }
 
   render() {
@@ -63,10 +59,8 @@ export class TravelApp extends LitElement {
       <main>
         <div class="logo">${openWcLogo}</div>
         <h1>${this.title}</h1>
-
-        <p>Welcome traveller 👍👍👍!</p>
+        <p>Welcome traveller :)</p>
       </main>
-
       <!-- <p class="app-footer">
         Made using
         <a
@@ -77,5 +71,8 @@ export class TravelApp extends LitElement {
         >.
       </p> -->
     `;
+  }
+  _getCustomTitle(newTitle) {
+    return `Your new title is ${newTitle}`;
   }
 }

@@ -4,7 +4,7 @@ import './TravelCard';
 class TravelCardList extends LitElement {
   static get properties() {
     return {
-      data: {
+      travelCardList: {
         type: Array,
       },
       load: {
@@ -47,12 +47,34 @@ class TravelCardList extends LitElement {
         padding: 2em;
         border-radius: 1em;
       }
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        .card-list-container {
+          position: relative;
+          bottom: 12em;
+        }
+        ul {
+          max-width: 75vw;
+          height: auto;
+          display: block;
+        }
+        ul li {
+          margin-bottom: 2em;
+        }
+        h1 {
+          font-size: 1.4em;
+        }
+      }
     `;
+  }
+
+  constructor() {
+    super();
+    this.travelCardList = [];
   }
 
   connectedCallback() {
     super.connectedCallback();
-    if (!this._cardList) {
+    if (!this.travelCardListt) {
       this.loading();
     }
   }
@@ -62,24 +84,28 @@ class TravelCardList extends LitElement {
       'https://devschool-2020.firebaseio.com/Caius/places.json'
     );
     const data = await response.json();
-    this._cardList = Object.values(data);
+    this.travelCardList = Object.values(data);
     this.load = false;
   }
 
   render() {
-    return html` ${this.load
-      ? html`<p>Content is loading...</p>`
-      : html`<h1 class="bookNow">Book Now!</h1>
-          <ul>
-            ${this._cardList.map(
-              location =>
-                html`
-                  <li>
-                    <travel-card .travelCard=${location}></travel-card>
-                  </li>
-                `
-            )}
-          </ul> `}`;
+    return html`
+      ${this.load
+        ? html`<p>Content is loading...</p>`
+        : html`<div class="card-list-container">
+            <h1>Book Now!</h1>
+            <ul>
+              ${this.travelCardList.map(
+                location =>
+                  html`
+                    <li>
+                      <travel-card .travelCard=${location}></travel-card>
+                    </li>
+                  `
+              )}
+            </ul>
+          </div>`}
+    `;
   }
 }
 

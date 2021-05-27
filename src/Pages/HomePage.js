@@ -1,9 +1,9 @@
 import { LitElement, html, css } from 'lit-element';
-import '../../LandingComponents/Header.js';
-import '../../LandingComponents/Footer.js';
-import '../../LandingComponents/TravelDestinationForm.js';
-import '../../LandingComponents/Hero.js';
-import '../../LandingComponents/ContentDescription.js';
+import '../Components/LandingComponents/Header.js';
+import '../Components/LandingComponents/Footer.js';
+import '../Components/LandingComponents/TravelDestinationForm.js';
+import '../Components/LandingComponents/Hero.js';
+import '../Components/LandingComponents/ContentDescription.js';
 
 export class Home extends LitElement {
   static get properties() {

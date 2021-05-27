@@ -13,22 +13,18 @@
 
 <body>
   <main>
-    <!-- <home-page></home-page> -->
   </main>
   <script type="module" src="./src/travel-app.js"></script>
-
-   <script type="module" src="./src/Components/TravelComponents/TravelCardList.js"></script>
-   <script type="module" src="./src/Components/TravelComponents/AddDestinationForm.js"></script>
-   <script type="module" src="./src/Components/Pages/Home/Home.js"></script>
-   <script type="module" src="./src/Components/Pages/AddDestination/AddDestination.js"></script>
-   <script type="module" src="./src/Components/Pages/Places/Places.js"></script>
+   <script type="module" src="./src/Pages/HomePage.js"></script>
+   <script type="module" src="./src/Pages/AddPlacePage.js"></script>
+   <script type="module" src="./src/Pages/PlacesPage.js"></script>
    <script type="module">
     import { Router } from '@vaadin/router';
     const main = document.querySelector('main');
     const router = new Router(main);
     router.setRoutes([
       { path: '/places', component: 'places-page' },
-      { path: '/add-destination', component: 'add-destination-page' },
+      { path: '/add-destination', component: 'add-place-page' },
       { path: '/', component: 'home-page' },
     ]);
     </script>

@@ -1,9 +1,9 @@
 import { LitElement, html, css } from 'lit-element';
-import '../../LandingComponents/Header.js';
-import '../../LandingComponents/Footer.js';
-import '../../TravelComponents/AddDestinationForm.js';
+import '../Components/LandingComponents/Header';
+import '../Components/LandingComponents/Footer.js';
+import '../Components/TravelComponents/AddDestinationForm.js';
 
-export class AddDestination extends LitElement {
+export class AddPlacePage extends LitElement {
   static get properties() {
     return {};
   }
@@ -21,4 +21,4 @@ export class AddDestination extends LitElement {
   }
 }
 
-customElements.define('add-destination-page', AddDestination);
+customElements.define('add-place-page', AddPlacePage);

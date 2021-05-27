@@ -1,34 +1,18 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Put your description here.">
-  <base href="/">
-  <title>travel-app</title>
-  <link rel="stylesheet" href="./assets/style.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="Description" content="Put your description here.">
+    <base href="/">
+    <title>travel-app</title>
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
 
-</head>
-
-<body>
-  <main>
-  </main>
-  <script type="module" src="./src/travel-app.js"></script>
-   <script type="module" src="./src/Pages/HomePage.js"></script>
-   <script type="module" src="./src/Pages/AddPlacePage.js"></script>
-   <script type="module" src="./src/Pages/PlacesPage.js"></script>
-   <script type="module">
-    import { Router } from '@vaadin/router';
-    const main = document.querySelector('main');
-    const router = new Router(main);
-    router.setRoutes([
-      { path: '/places', component: 'places-page' },
-      { path: '/add-destination', component: 'add-place-page' },
-      { path: '/', component: 'home-page' },
-    ]);
-    </script>
-
+  <body>
+    <travel-app></travel-app>
+    <script type="module" src="./src/travel-app.js"></script>
   </body>
 
 </html>

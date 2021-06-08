@@ -84,37 +84,56 @@ class Header extends LitElement {
       @media screen and (min-width: 481px) and (max-width: 768px) {
         nav {
           display: flex;
-          flex-direction: column;
+          justify-content: space-between;
         }
-        nav a {
-          font-size: 0.7em;
-          padding: 5px;
+        ul {
+          display: block;
+          padding-right: 32px;
         }
-        .header-book-now {
-          font-size: 0.7em;
-          padding: 20px;
+
+        li {
+          display: inline-block;
+          padding: 0px 8px;
         }
+        li a {
+          font-size:0.5em;
+        }
+        .header-book-now{
+          font-size:0.5em;
+          position: relative;
+          top:15em;
+          right:24em;
+          height:7em;
+          padding-bottom:1em;
+          padding-top:2em;
+        }
+
       }
 
       @media screen and (min-width: 320px) and (max-width: 480px) {
         header h3 {
           font-size: 24px;
+          position:relative;
+          bottom:2em;
+          left:1em;
         }
-
         nav {
-          display: flex;
           flex-direction: column;
+          margin-top: 5em;
+          text-align: center;
+          flex-wrap: nowrap;
         }
-        nav a {
-          font-size: 0.3em;
-          padding: 3px;
+        nav ul {
+          flex-direction: column;
+          margin: -2em;
         }
-        .header-book-now {
-          font-size: 0.7em;
-          padding: 18px;
+        nav ul li {
+          line-height: 1.5em;
+        }
+        .header-book-now{
           position: relative;
-          top: 24px;
-        }
+          top:1em;
+          left:1em;
       }
     `;
   }
@@ -133,7 +152,7 @@ class Header extends LitElement {
             <li><a href="/places">Places</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
-          <a href="#"><span class="header-book-now">Book now</span></a>
+          <button type = "button" class="header-book-now">Book now</button>
         </nav>
         <link rel="shortcut icon" href="#" />
       </header>

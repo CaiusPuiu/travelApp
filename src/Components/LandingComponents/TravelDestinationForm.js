@@ -130,6 +130,8 @@ class TravelDestinationForm extends LitElement {
           margin-top: 0;
           position: relative;
           left: 35px;
+          height:10em;
+
         }
       }
       @media screen and (min-width: 320px) and (max-width: 480px) {

@@ -64,6 +64,7 @@ class Hero extends LitElement {
           bottom: 155px;
         }
       }
+
       @media screen and (min-width: 769px) and (max-width: 1024px) {
         .main-title {
           font-size: 2.5em;
@@ -79,8 +80,9 @@ class Hero extends LitElement {
           position: relative;
           bottom: 130px;
         }
+      }
 
-      @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 768px) {
         .main-title {
           font-size: 2.1em;
           position: relative;
@@ -92,7 +94,6 @@ class Hero extends LitElement {
           top: 5em;
         }
       }
-
       @media screen and (min-width: 320px) and (max-width: 480px) {
         .main-title {
           font-size: 1.6em;
@@ -105,7 +106,9 @@ class Hero extends LitElement {
           position: relative;
           top: 5em;
         }
+
       }
+    
     `;
   }
 
@@ -120,15 +123,7 @@ class Hero extends LitElement {
           <button type="button" class="start-tour-button">Start Tour</button>
         </div>
         <div class="hero-image-credits">
-          Photo by
-          <a href="https://unsplash.com/@dariuszsankowski">
-            Dariusz Sankowski
-          </a>
-          from
-          <a
-            href="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26ixlib=rb-1.2.1%26auto=format%26fit=crop%26w=667%26q=80"
-            >Unsplash</a
-          >
+        <p>Photo by Dariusz Sankowski from Unsplash</p>
         </div>
       </div>
     `;

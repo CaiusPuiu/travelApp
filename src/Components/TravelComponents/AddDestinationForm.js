@@ -104,14 +104,22 @@ class AddDestinationForm extends LitElement {
   }
 
   async _postLocation() {
-    const { response } = await ajax.fetchJson(
-      'https://devschool-2020.firebaseio.com/Caius/places.json',
-      {
-        method: 'POST',
-        body: this.data,
-      }
-    );
-    console.log(response);
+    try{
+
+      const { response } = await ajax.fetchJson(
+        'https://devschool-2020.firebaseio.com/Cdasdsaius/places.json',
+        {
+          method: 'POST',
+          body: this.data,
+        }
+      );
+      console.log(response);
+      return [response, null];
+    }
+    catch(error){
+      console.error(error);
+      return [null, error];
+    }
   }
 }
 

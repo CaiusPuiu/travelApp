@@ -134,6 +134,7 @@ class Header extends LitElement {
           position: relative;
           top:1em;
           left:1em;
+       }
       }
     `;
   }
@@ -150,7 +151,7 @@ class Header extends LitElement {
             <li><a href="#">Home</a></li>
             <li><a href="/add-destination">Add Destination</a></li>
             <li><a href="/places">Places</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
           </ul>
           <button type = "button" class="header-book-now">Book now</button>
         </nav>

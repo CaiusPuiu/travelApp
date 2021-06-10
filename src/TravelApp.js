@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import './Pages/HomePage.js';
 import './Pages/PlacesPage.js';
 import './Pages/AddPlacePage.js';
+import './Pages/ContactUsPage';
 import { Router } from '@vaadin/router';
 export class TravelApp extends LitElement {
   static get properties() {
@@ -16,7 +17,9 @@ export class TravelApp extends LitElement {
       router.setRoutes([
         { path: '/', component: 'home-page' },
         { path: '/places', component: 'places-page' },
-        { path: '/add-destination', component: 'add-place-page' }
+        { path: '/add-destination', component: 'add-place-page' },
+        { path: '/contact-us', component: 'contact-us-page' }
+
       ]);
   }
 

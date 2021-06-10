@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 
 class TravelCard extends LitElement {
+  
   static get properties() {
     return {
       travelCard: { type: Object },

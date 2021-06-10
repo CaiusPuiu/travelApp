@@ -1,38 +1,18 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Put your description here.">
-  <base href="/">
-  <title>travel-app</title>
-  <link rel="stylesheet" href="./assets/style.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="Description" content="Put your description here.">
+    <base href="/">
+    <title>travel-app</title>
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
 
-</head>
-
-<body>
-  <main>
-    <!-- <home-page></home-page> -->
-  </main>
-  <script type="module" src="./src/travel-app.js"></script>
-
-   <script type="module" src="./src/Components/TravelComponents/TravelCardList.js"></script>
-   <script type="module" src="./src/Components/TravelComponents/AddDestinationForm.js"></script>
-   <script type="module" src="./src/Components/Pages/Home/Home.js"></script>
-   <script type="module" src="./src/Components/Pages/AddDestination/AddDestination.js"></script>
-   <script type="module" src="./src/Components/Pages/Places/Places.js"></script>
-   <script type="module">
-    import { Router } from '@vaadin/router';
-    const main = document.querySelector('main');
-    const router = new Router(main);
-    router.setRoutes([
-      { path: '/places', component: 'places-page' },
-      { path: '/add-destination', component: 'add-destination-page' },
-      { path: '/', component: 'home-page' },
-    ]);
-    </script>
-
+  <body>
+    <travel-app></travel-app>
+    <script type="module" src="./src/travel-app.js"></script>
   </body>
 
 </html>

@@ -1,9 +1,9 @@
 import { LitElement, html, css } from 'lit-element';
-import '../../LandingComponents/Header.js';
-import '../../LandingComponents/Footer.js';
-import '../../TravelComponents/TravelCardList.js';
+import '../Components/LandingComponents/Header.js';
+import '../Components/LandingComponents/Footer.js';
+import '../Components/TravelComponents/TravelCardList.js';
 
-export class Places extends LitElement {
+export class PlacesPage extends LitElement {
   static get properties() {
     return {};
   }
@@ -21,4 +21,4 @@ export class Places extends LitElement {
   }
 }
 
-customElements.define('places-page', Places);
+customElements.define('places-page', PlacesPage);

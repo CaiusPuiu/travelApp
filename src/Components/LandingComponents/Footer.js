@@ -98,6 +98,7 @@ class Footer extends LitElement {
         footer .subscribe-section {
           position: relative;
           bottom: 100px;
+          padding:1px;
         }
         footer .subscribe-section input[type='button'] {
           position: relative;
@@ -105,10 +106,12 @@ class Footer extends LitElement {
           left: 1px;
           border: solid 2px #bdbdbd;
           font-size: 0.6em;
+
         }
         footer #email {
           width: 15em;
           height: 4em;
+          padding:0.4em;
         }
         .footer-contacts {
           font-size: 0.5em;
@@ -139,6 +142,9 @@ class Footer extends LitElement {
         footer #email {
           width: 10em;
           height: 1em;
+          padding:1em;
+          position:relative;
+          right:1.2em;
         }
         .footer-contacts {
           font-size: 0.5em;
@@ -171,7 +177,6 @@ class Footer extends LitElement {
             type="email"
             name="email"
             id="email"
-            placeholder="Enter your email address"
           />
           <input type="button" value="Subscribe" />
         </div>

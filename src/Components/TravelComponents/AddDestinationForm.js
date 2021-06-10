@@ -1,11 +1,11 @@
 import { LitElement, css, html } from '@lion/core';
-import '../LionWebComponents/TraveLionButton.js';
-import '../LionWebComponents/TravelLionForm.js';
-import '../LionWebComponents/TravelLionInput.js';
 import { ajax } from '@lion/ajax';
 import { MinLength, Required } from '@lion/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import { IsRomania } from '../FormValidators/isRomania.js';
+import { IsRomania } from '../FormValidators/IsRomania.js';
+import '@lion/form/define';
+import '@lion/input/define';
+import '@lion/button/define';
 
 class AddDestinationForm extends LitElement {
   static get styles() {
@@ -18,7 +18,7 @@ class AddDestinationForm extends LitElement {
         width: 40%;
         margin: 0 auto;
       }
-      travel-lion-button {
+      lion-button {
         border: 4px solid;
         border-radius: 12px;
         background-color: #847ff0;
@@ -48,9 +48,9 @@ class AddDestinationForm extends LitElement {
 
   render() {
     return html`
-      <travel-lion-form>
+      <lion-form>
         <form @submit=${this._handleFormSubmit}>
-          <travel-lion-input
+          <lion-input
             name="name"
             label="Name"
             .validators=${[
@@ -61,8 +61,8 @@ class AddDestinationForm extends LitElement {
               new IsRomania(),
             ]}
           >
-          </travel-lion-input>
-          <travel-lion-input
+          </lion-input>
+          <lion-input
             name="type"
             label="Type"
             .validators=${[
@@ -71,8 +71,8 @@ class AddDestinationForm extends LitElement {
               }),
             ]}
           >
-          </travel-lion-input>
-          <travel-lion-input
+          </lion-input>
+          <lion-input
             name="description"
             label="Description"
             .validators=${[
@@ -82,16 +82,16 @@ class AddDestinationForm extends LitElement {
               new Required(),
             ]}
           >
-          </travel-lion-input>
-          <travel-lion-input
+          </lion-input>
+          <lion-input
             name="imageUrl"
             label="ImageUrl"
             .validators=${[new Required()]}
           >
-          </travel-lion-input>
-          <travel-lion-button type="submit">Add location</travel-lion-button>
+          </lion-input>
+          <lion-button type="submit">Add location</lion-button>
         </form>
-      </travel-lion-form>
+      </lion-form>
     `;
   }
 
@@ -104,14 +104,22 @@ class AddDestinationForm extends LitElement {
   }
 
   async _postLocation() {
-    const { response } = await ajax.fetchJson(
-      'https://devschool-2020.firebaseio.com/Caius/places.json',
-      {
-        method: 'POST',
-        body: this.data,
-      }
-    );
-    console.log(response);
+    try{
+
+      const { response } = await ajax.fetchJson(
+        'https://devschool-2020.firebaseio.com/Cdasdsaius/places.json',
+        {
+          method: 'POST',
+          body: this.data,
+        }
+      );
+      console.log(response);
+      return [response, null];
+    }
+    catch(error){
+      console.error(error);
+      return [null, error];
+    }
   }
 }
 

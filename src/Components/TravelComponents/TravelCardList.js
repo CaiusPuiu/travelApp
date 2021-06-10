@@ -80,12 +80,19 @@ class TravelCardList extends LitElement {
   }
 
   async loading() {
-    const response = await fetch(
-      'https://devschool-2020.firebaseio.com/Caius/places.json'
-    );
-    const data = await response.json();
-    this.travelCardList = Object.values(data);
-    this.load = false;
+    try{
+      const response = await fetch(
+      'https://devschool-2020.firebaseio.com/Caius/places.json');
+      const data = await response.json();
+      this.travelCardList = Object.values(data);
+      this.load = false;
+      return [response,null];
+    }
+
+    catch (error){
+      console.error(error);
+      return [null, error];
+    }
   }
 
   render() {
